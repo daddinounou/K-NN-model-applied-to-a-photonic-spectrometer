@@ -1,0 +1,17 @@
+
+function y=output(lambda)
+        
+    delay= exp(-i*Beta*L2/lambda)*[exp(-i*Beta*DeltaL/lambda),0;0,1];
+    
+    x=(abs(Input*split*delay*com)).^2;
+    
+    y=x(2);
+end
+    
+    
+        
+  
+        
+        
+        
+  
