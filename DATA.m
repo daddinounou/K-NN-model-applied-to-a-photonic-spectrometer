@@ -9,10 +9,10 @@ stdnoise=0.00;                      % the std of noise in gaussian distribution
 loss=0;
 faberr=rand(1,length(MZ)); 
 
-% 
-% 
-% DATA1=[];  DATA2=[];  DATA3=[];  DATA4=[];
-% 
+ 
+
+DATA1=[];  DATA2=[];  DATA3=[];  DATA4=[];
+
 % for T=300:0.1:305
 %     w=F_transfer_matrix(deltaL0,MZ,lambda,stdnoise,loss,T,faberr);
 %     larg=0.01; 
@@ -38,7 +38,7 @@ faberr=rand(1,length(MZ));
 %     Pout=Pin*w;
 %     DATA3=[DATA3;Pout];
 % end
-% % 
+% 
 % 
 % for T=300:0.1:305
 %     w=F_transfer_matrix(deltaL0,MZ,lambda,stdnoise,loss,T,faberr);
