@@ -50,19 +50,19 @@ faberr=rand(1,length(MZ));
 % 
 % toc
 
-
 %%%%%%%%%%%
+%fixed Temperature (T=300)
 w=F_transfer_matrix(deltaL0,MZ,lambda,stdnoise,loss,300,faberr);
 larg=0.01; 
 Pin = 1-exp(-(lambda-1549.5).^ 2 / (2 * larg ^ 2));   Pin = Pin / sum (Pin);
 Pout=Pin*w;
 %%%%%%%%%%%
-
+T=300:0.1:305;
 load('DATA1');load('DATA2');load('DATA3');
 DAT=[DATA1;DATA2;DATA3];
 
 labels=1:153;      % correspendant à 300:0.1:305;
-x=DAT(137,:);   %  300.9
+x=DAT(137,:);   %  T = 300.9
 %x=Pout;
 
 y=zeros(1,size(DAT,1));
@@ -75,21 +75,11 @@ end
 [dist,label]=min(y);     
 label
     
-    
-% 
-% for i=1:length(DATA1(:,1))
-%     plot(MZ,DATA1(i,:),'DisplayName',num2str(i))
-%     hold on 
-% end
-% legend('show')
-
-      
-figure
-for i=1:5:31
-    plot(T,DATA1(:,i),'DisplayName',num2str(i))
-    hold on
+for i=1:length(DATA1(:,1))
+    plot(MZ,DATA1(i,:),'DisplayName',num2str(i))
+    hold on 
 end
-
 legend('show')
 
+      
 

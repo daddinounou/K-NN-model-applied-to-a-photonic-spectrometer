@@ -1,4 +1,4 @@
-function [predicted_labels,nn_index,accuracy] = KNN_(k,data,labels,t_data,t_labels)
+function [predicted_labels,nn_index,accuracy,ed,ind] = KNN_(k,data,labels,t_data,t_labels)
 %initialization
 predicted_labels=zeros(size(t_data,1),1);
 ed=zeros(size(t_data,1),size(data,1)); %ed: (MxN) euclidean distances 
