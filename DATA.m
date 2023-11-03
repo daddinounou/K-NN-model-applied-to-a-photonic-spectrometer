@@ -1,5 +1,5 @@
 
-clear all
+%clear all
 tic
 deltaL0=365e3;                      % the path length delay increment 
 MZ=0:31;                            % number of MZ interferometers
@@ -11,8 +11,8 @@ faberr=rand(1,length(MZ));
 
  
 
-DATA1=[];  DATA2=[];  DATA3=[];  DATA4=[];
-
+% DATA1=[];  DATA2=[];  DATA3=[];  DATA4=[];
+% 
 % for T=300:0.1:305
 %     w=F_transfer_matrix(deltaL0,MZ,lambda,stdnoise,loss,T,faberr);
 %     larg=0.01; 
