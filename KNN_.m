@@ -37,5 +37,3 @@ if isempty(t_labels)==0
 end
 
 
-%Mistake in the "%get the majority vote" section. "options=unique(k_nn(i,:));" should be changed to "options=unique(train_labels(k_nn(i,:)));" Similarly the if condition there, should be corrected.
-%NOTE: MATLAB has its own KNN as well. 
